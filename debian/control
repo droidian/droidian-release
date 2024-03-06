@@ -1,0 +1,18 @@
+Source: droidian-release
+Maintainer: Eugenio Paolantonio (g7) <eugenio@droidian.org>
+Section: misc
+Priority: optional
+Build-Depends: debhelper (>= 13),
+               make,
+Standards-Version: 4.5.0.3
+Vcs-Browser: https://github.com/droidian/droidian-release
+Vcs-Git: https://github.com/droidian/droidian-release.git
+
+Package: droidian-release
+Architecture: all
+Pre-Depends: base-files
+Breaks: droidian-branding (<< 13.0.0+git20240306225000)
+Replaces: droidian-branding (<< 13.0.0+git20240306225000)
+Description: The Droidian Mobile distribution
+ This package contains relevant informations and
+ metadata for the current Droidian release.

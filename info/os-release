@@ -1,0 +1,6 @@
+PRETTY_NAME="Droidian trixie"
+NAME="Droidian"
+ID=droidian
+ID_LIKE="debian"
+HOME_URL="https://droidian.org/"
+BUG_REPORT_URL="https://github.com/droidian/meta/issues"

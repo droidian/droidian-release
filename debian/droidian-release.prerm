@@ -1,0 +1,50 @@
+#!/bin/sh
+
+remove() {
+	# Restore os infos
+	if [ -e "/usr/lib/droidian-release/os-release.debian" ]; then
+		unlink /usr/lib/os-release
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/os-release.debian" \
+			--remove "/usr/lib/os-release"
+
+	fi
+
+	if [ -e "/usr/lib/droidian-release/issue.debian" ]; then
+		unlink /etc/issue
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/issue.debian" \
+			--remove "/etc/issue"
+	fi
+
+	if [ -e "/usr/lib/droidian-release/issue.net.debian" ]; then
+		unlink /etc/issue.net
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/issue.net.debian" \
+			--remove "/etc/issue.net"
+	fi
+}
+
+case "${1}" in
+	remove)
+		remove
+		;;
+
+	upgrade|failed-upgrade|deconfigure)
+		;;
+
+	*)
+		echo "prerm called with unknown argument $1" >&2
+		exit 1
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,86 @@
+#!/bin/sh
+
+upgrade_from_branding() {
+	# Restore os infos
+	if [ -e "/usr/lib/droidian-branding/os-release.debian" ]; then
+		unlink /usr/lib/os-release
+		dpkg-divert \
+			--rename \
+			--package droidian-branding \
+			--divert "/usr/lib/droidian-branding/os-release.debian" \
+			--remove "/usr/lib/os-release"
+
+	fi
+
+	if [ -e "/usr/lib/droidian-branding/issue.debian" ]; then
+		unlink /etc/issue
+		dpkg-divert \
+			--rename \
+			--package droidian-branding \
+			--divert "/usr/lib/droidian-branding/issue.debian" \
+			--remove "/etc/issue"
+	fi
+
+	if [ -e "/usr/lib/droidian-branding/issue.net.debian" ]; then
+		unlink /etc/issue.net
+		dpkg-divert \
+			--rename \
+			--package droidian-branding \
+			--divert "/usr/lib/droidian-branding/issue.net.debian" \
+			--remove "/etc/issue.net"
+	fi
+}
+
+configure() {
+	# TODO: remove when migration is not necessary anymore
+	upgrade_from_branding
+
+	# Divert os infos
+	if ! [ -e "/usr/lib/droidian-release/os-release.debian" ]; then
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/os-release.debian" \
+			--add "/usr/lib/os-release"
+
+		ln -s /usr/share/droidian-release/os-release /usr/lib/os-release
+	fi
+
+	if ! [ -e "/usr/lib/droidian-release/issue.debian" ]; then
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/issue.debian" \
+			--add "/etc/issue"
+
+		ln -s /usr/share/droidian-release/issue /etc/issue
+	fi
+
+	if ! [ -e "/usr/lib/droidian-release/issue.net.debian" ]; then
+		dpkg-divert \
+			--rename \
+			--package droidian-release \
+			--divert "/usr/lib/droidian-release/issue.net.debian" \
+			--add "/etc/issue.net"
+
+		ln -s /usr/share/droidian-release/issue.net /etc/issue.net
+	fi
+}
+
+case "${1}" in
+	configure)
+		configure
+		;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+		;;
+
+	*)
+		echo "postinst called with unknown argument $1" >&2
+		exit 1
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0
