@@ -1,0 +1,70 @@
+# This is the Debian base for this snapshot
+Source: debian-snapshot:20240502T143917Z
+Suites: trixie
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+# These are the Droidian packages overlayed on top
+Source: droidian:production
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+# A phone-focused fork of gnome-clocks, to be
+# used until GNOME Clocks gets a proper adaptive redesign.
+Source: droidian:droidian-gnome-clocks:trixie-pureosfork
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+# Droidian: use a version of gst-plugins-bad1.0 without
+# the uvch264 module built-in
+Source: droidian:droidian-gst-plugins-bad1.0:trixie-workaround-disable-uvch264
+Suites: trixie
+Architectures: amd64 armhf arm64
+
+# callaudiod: still WIP
+Source: droidian:droidian-callaudiod:trixie-droid-0-1-4
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+# 2023-07-22: gnome-calls 45~alpha.0-4 crashes
+Source: droidian:droidian-gnome-calls:trixie-emergency-call-hotfix
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+# 2024-04-02: squeekboard
+Source: droidian:droidian-squeekboard:trixie-upgrade-1-24-0
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+# Always prefer Droidian packages
+Package: *
+Pin: release o=Droidian
+Pin-Priority: 1002
+
+# Drop adaptation packages that aren't supported
+# anymore by one of the previous maintainers
+Drop: src:linux-android-daria-zahedan src:adaptation-droidian-zahedan
+Drop: src:linux-android-xiaomi-angelica src:adaptation-droidian-angelica
+Drop: src:linux-android-samsung-starqlte src:adaptation-droidian-starqlte
+Drop: src:linux-android-xiaomi-lavender src:adaptation-droidian-lavender
+Drop: src:linux-android-samsung-star2lte src:linux-android-samsung-crownlte src:adaptation-droidian-exynos9810
+
+# Ensure we keep high-priority packages
+Keep: priority:1002
+
+# Important: always keep Droidian packages
+Keep: origin:Droidian
+
+# Finally publish the snapshot
+Target: ./droidian-snapshots/90/
+Suites: rolling
+Architectures: amd64 armhf arm64
+Components: main contrib non-free
+Origin: Droidian
+Label: Droidian (snapshot 90)
+
