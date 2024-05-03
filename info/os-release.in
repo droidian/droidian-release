@@ -1,4 +1,4 @@
-PRETTY_NAME="Droidian trixie"
+PRETTY_NAME="Droidian @DROIDIAN_VERSION@"
 NAME="Droidian"
 ID=droidian
 ID_LIKE="debian"

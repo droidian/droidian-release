@@ -1,5 +1,5 @@
 # This is the Debian base for this snapshot
-Source: debian-snapshot:20240502T143917Z
+Source: debian-snapshot:@DEBIAN_SNAPSHOT@
 Suites: trixie
 Components: main contrib non-free
 Architectures: amd64 armhf arm64
@@ -67,10 +67,10 @@ Keep: priority:1002
 Keep: origin:Droidian
 
 # Finally publish the snapshot
-Target: ./droidian-snapshots/90/
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@/
 Suites: rolling
 Architectures: amd64 armhf arm64
 Components: main contrib non-free
 Origin: Droidian
-Label: Droidian (snapshot 90)
+Label: Droidian (snapshot @DROIDIAN_VERSION@)
 

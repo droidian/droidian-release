@@ -16,3 +16,12 @@ Replaces: droidian-branding (<< 13.0.0+git20240306225000)
 Description: The Droidian Mobile distribution
  This package contains relevant informations and
  metadata for the current Droidian release.
+
+Package: droidian-release-snapshot-control
+Architecture: all
+Description: Control files for Droidian snapshots
+ This package contains control files required to
+ create Droidian snapshots.
+ .
+ It's only needed by the tooling itself, it's
+ useless in an installed system.
