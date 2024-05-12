@@ -8,6 +8,7 @@ out/%: %.in
 	mkdir -p out/$$(dirname $*)
 	sed \
 		-e 's|@DEBIAN_SNAPSHOT@|$(DEBIAN_SNAPSHOT)|g' \
+		-e 's|@DEBIAN_SUITE@|$(DEBIAN_SUITE)|g' \
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
 		$*.in > out/$*
 
