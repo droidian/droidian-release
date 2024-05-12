@@ -12,7 +12,7 @@ out/%: %.in
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
 		$*.in > out/$*
 
-snapshot-control: out/droidian-current
+snapshot-control: out/droidian-current out/support/buildd_support.list
 
 release: out/info/droidian-release out/info/issue out/info/issue.net out/info/os-release
 

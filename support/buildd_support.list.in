@@ -1,0 +1,13 @@
+# Droidian snapshots don't export i386 packages as they're not needed.
+# However, on the buildd side there might be some need to have i386 packages
+# around. This support file supplies the i386 repository for the same Debian
+# snapshot used as a base.
+#
+# This is not enabled by default, and you should symlink this in
+# /etc/apt/sources.list.d.
+#
+# This is part of a package (rather than be a buildd-side quirk) so that it
+# can be easily updated (especially useful if using the flavour symlink
+# rather than the static snapshot version).
+
+deb [arch=i386 check-valid-until=no] https://snapshot.debian.org/archive/debian/@DEBIAN_SNAPSHOT@/ @DEBIAN_SUITE@ main
