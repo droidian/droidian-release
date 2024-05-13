@@ -64,6 +64,16 @@ Package: *
 Pin: release o=Droidian
 Pin-Priority: 1002
 
+# Debian t64 transition: deprefer t64 packages
+# from sid
+Package: *t64 *t64:amd64 *t64:arm64 *t64:armhf
+Pin: release n=trixie
+Pin-Priority: 500
+
+Package: *t64 *t64:amd64 *t64:arm64 *t64:armhf
+Pin: release n=sid
+Pin-Priority: -1
+
 # Only install packages from unstable if there
 # aren't alternatives
 Package: *
