@@ -25,7 +25,7 @@ Architectures: amd64 armhf arm64
 
 # Droidian: use a version of gst-plugins-bad1.0 without
 # the uvch264 module built-in
-Source: droidian:droidian-gst-plugins-bad1.0:trixie-workaround-disable-uvch264
+Source: droidian:droidian-gst-plugins-bad1.0:next-workaround-disable-uvch264
 Suites: trixie
 Architectures: amd64 armhf arm64
 
