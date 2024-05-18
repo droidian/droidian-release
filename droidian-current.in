@@ -30,7 +30,7 @@ Suites: trixie
 Architectures: amd64 armhf arm64
 
 # callaudiod: still WIP
-Source: droidian:droidian-callaudiod:trixie-droid-0-1-4
+Source: droidian:droidian-callaudiod:next-droid-0-1-4
 Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
