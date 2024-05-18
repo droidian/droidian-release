@@ -41,12 +41,6 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# 2024-04-02: squeekboard
-Source: droidian:droidian-squeekboard:trixie-upgrade-1-24-0
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
 # 2024-05-03: snapshot-aware droidian-release
 Source: droidian:droidian-droidian-release:trixie-snapshots
 Suites: trixie
