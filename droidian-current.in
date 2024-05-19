@@ -18,7 +18,7 @@ Architectures: amd64 armhf arm64
 
 # A phone-focused fork of gnome-clocks, to be
 # used until GNOME Clocks gets a proper adaptive redesign.
-Source: droidian:droidian-gnome-clocks:trixie-pureosfork
+Source: droidian:droidian-gnome-clocks:next-pureosfork
 Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
