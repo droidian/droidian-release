@@ -62,5 +62,5 @@ Suites: rolling
 Architectures: amd64 armhf arm64
 Components: main contrib non-free
 Origin: Droidian
-Label: Droidian (snapshot @DROIDIAN_VERSION@)
-
+Label: Droidian (snapshot)
+Version: @DROIDIAN_VERSION@
