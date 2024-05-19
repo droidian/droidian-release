@@ -37,12 +37,6 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# 2024-05-13: snapshot-aware droidian-apt-config
-Source: droidian:droidian-droidian-apt-config:trixie-rolling
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
