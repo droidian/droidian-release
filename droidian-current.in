@@ -35,12 +35,6 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# 2023-07-22: gnome-calls 45~alpha.0-4 crashes
-Source: droidian:droidian-gnome-calls:trixie-emergency-call-hotfix
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
 # 2024-05-03: snapshot-aware droidian-release
 Source: droidian:droidian-droidian-release:trixie-snapshots
 Suites: trixie
