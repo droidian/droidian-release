@@ -4,15 +4,9 @@ Suites: @DEBIAN_SUITE@
 Components: main contrib non-free
 Architectures: amd64 armhf arm64
 
-# Add sid on top for the packages removed in testing
-Source: debian-snapshot:@DEBIAN_SNAPSHOT@
-Suites: sid
-Components: main
-Architectures: amd64 armhf arm64
-
 # These are the Droidian packages overlayed on top
 Source: droidian:production
-Suites: @DEBIAN_SUITE@
+Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
@@ -51,22 +45,6 @@ Architectures: amd64 armhf arm64
 Package: *
 Pin: release o=Droidian
 Pin-Priority: 1002
-
-# Debian t64 transition: deprefer t64 packages
-# from sid
-Package: *t64 *t64:amd64 *t64:arm64 *t64:armhf
-Pin: release n=trixie
-Pin-Priority: 500
-
-Package: *t64 *t64:amd64 *t64:arm64 *t64:armhf
-Pin: release n=sid
-Pin-Priority: -1
-
-# Only install packages from unstable if there
-# aren't alternatives
-Package: *
-Pin: release n=sid
-Pin-Priority: 100
 
 # Drop adaptation packages that aren't supported
 # anymore by one of the previous maintainers
