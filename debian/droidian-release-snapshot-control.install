@@ -1,3 +1,4 @@
 out/droidian-current /usr/share/droidian-release/
+out/droidian-update /usr/share/droidian-release/
 out/support/buildd_support.list /usr/share/droidian-release/
 droidian-snapshot.mk /usr/share/droidian-release/

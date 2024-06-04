@@ -56,6 +56,9 @@ Keep: priority:1002
 # Important: always keep Droidian packages
 Keep: origin:Droidian
 
+# Update information
+Update-From: @DROIDIAN_UPDATE_FROM@
+
 # Finally publish the snapshot
 Target: ./droidian-snapshots/@DROIDIAN_VERSION@/
 Suites: rolling
