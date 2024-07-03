@@ -21,9 +21,7 @@ Architectures: amd64 armhf arm64
 # the uvch264 module built-in
 Source: droidian:droidian-gst-plugins-bad1.0:next-workaround-disable-uvch264
 Suites: trixie
-#Architectures: amd64 armhf arm64
-# 2024-05-19: Disable amd64 for now due to some troubles with libopencv
-Architectures: armhf arm64
+Architectures: amd64 armhf arm64
 
 # callaudiod: still WIP
 Source: droidian:droidian-callaudiod:next-droid-0-1-4
