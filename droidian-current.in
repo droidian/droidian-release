@@ -37,16 +37,10 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# 2024-07-03: downgrade chatty to 0.8.2-1.1 due to Chatty#893
-Source: debian-snapshot:20240526T210920Z
-Suites: @DEBIAN_SUITE@
-Components: main
+# 2024-07-03: use a version of chatty with a fix for to Chatty#893
+Source: droidian:droidian-chatty:next-notification-fix
+Suites: trixie
 Architectures: amd64 armhf arm64
-
-Package: chatty
-Pin: version 0.8.2-1.1
-Pin-Priority: 1003
-##########
 
 # Always prefer Droidian packages
 Package: *
