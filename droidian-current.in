@@ -40,6 +40,13 @@ Source: droidian:droidian-chatty:next-notification-fix
 Suites: trixie
 Architectures: amd64 armhf arm64
 
+# 2024-07-04: deprefer Debian's libwlroots12t64 to make APT choose
+# the right version. This is only needed during development, and
+# once wlroots is merged can be removed
+Package: libwlroots12t64 libwlroots-dev
+Pin: version 0.17.4-1
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
