@@ -1,5 +1,6 @@
 PRETTY_NAME="Droidian @DROIDIAN_VERSION@"
 NAME="Droidian"
+VENDOR_NAME="Droidian Project"
 ID=droidian
 ID_LIKE="debian"
 HOME_URL="https://droidian.org/"
