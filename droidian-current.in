@@ -40,6 +40,11 @@ Source: droidian:droidian-chatty:next-notification-fix
 Suites: trixie
 Architectures: amd64 armhf arm64
 
+# 2024-07-31: network-manager: remove GDBusObjectManagerClient hack
+Source: droidian:droidian-network-manager:next-wwan-fix
+Suites: trixie
+Architectures: amd64 armhf arm64
+
 # 2024-07-04: deprefer Debian's libwlroots12t64 to make APT choose
 # the right version. This is only needed during development, and
 # once wlroots is merged can be removed
