@@ -66,6 +66,11 @@ Package: python3-examples idle python3-doc 2to3 python3:armhf python3:arm64 pyth
 Pin: version 3.12.3-1
 Pin-Priority: 1001
 
+# 2024-08-04: firefox mobile config with Droidian characteristics 
+Source: droidian:droidian-firefox-esr-mobile-config:next-tabs
+Suites: trixie
+Architectures: amd64 armhf arm64
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
