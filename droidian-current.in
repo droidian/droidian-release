@@ -52,6 +52,20 @@ Package: libwlroots12t64 libwlroots-dev
 Pin: version 0.17.4-1
 Pin-Priority: -1
 
+# 2024-08-04: handle python3-distutils removal gracefully
+Source: debian-snapshot:20240711T025212Z
+Suites: @DEBIAN_SUITE@
+Components: main
+Architectures: amd64 armhf arm64
+
+Source: droidian:droidian-droidian-snapshot-98-distutils-migration:next-snap98-migration
+Suites: trixie
+Architectures: amd64 armhf arm64
+
+Package: python3-examples idle python3-doc 2to3 python3:armhf python3:arm64 python3:amd64 python3-venv:armhf python3-venv:arm64 python3-venv:amd64 python3-minimal:armhf python3-minimal:arm64 python3-minimal:amd64 python3-nopie:armhf python3-nopie:arm64 python3-nopie:amd64 python3-dev:armhf python3-dev:arm64 python3-dev:amd64 libpython3-dev:armhf libpython3-dev:arm64 libpython3-dev:amd64 libpython3-stdlib:armhf libpython3-stdlib:arm64 libpython3-stdlib:amd64 python3-dbg:armhf python3-dbg:arm64 python3-dbg:amd64 libpython3-dbg:armhf libpython3-dbg:arm64 libpython3-dbg:amd64 python3-all:armhf python3-all:arm64 python3-all:amd64 python3-all-dev:armhf python3-all-dev:arm64 python3-all-dev:amd64 python3-all-dbg:armhf python3-all-dbg:arm64 python3-all-dbg:amd64 python3-all-venv:armhf python3-all-venv:arm64 python3-all-venv:amd64 libpython3-all-dev:armhf libpython3-all-dev:arm64 libpython3-all-dev:amd64 libpython3-all-dbg:armhf libpython3-all-dbg:arm64 libpython3-all-dbg:amd64 python3-full:armhf python3-full:arm64 python3-full:amd64
+Pin: version 3.12.3-1
+Pin-Priority: 1001
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
