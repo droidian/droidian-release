@@ -49,7 +49,7 @@ Architectures: amd64 armhf arm64
 # the right version. This is only needed during development, and
 # once wlroots is merged can be removed
 Package: libwlroots12t64 libwlroots-dev
-Pin: version 0.17.4-1
+Pin: version 0.17.4-1+b1
 Pin-Priority: -1
 
 # 2024-08-04: firefox mobile config with Droidian characteristics 
