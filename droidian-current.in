@@ -57,6 +57,12 @@ Source: droidian:droidian-firefox-esr-mobile-config:next-tabs
 Suites: trixie
 Architectures: amd64 armhf arm64
 
+# 2024-08-15: prefer glib version with fix for pid tracking on
+# older kernels
+Source: droidian:droidian-glib:next-pidfd
+Suites: trixie
+Architectures: amd64 armhf arm64
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
