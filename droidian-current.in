@@ -76,6 +76,10 @@ Drop: src:linux-android-samsung-starqlte src:adaptation-droidian-starqlte
 Drop: src:linux-android-xiaomi-lavender src:adaptation-droidian-lavender
 Drop: src:linux-android-samsung-star2lte src:linux-android-samsung-crownlte src:adaptation-droidian-exynos9810
 
+# Drop batman, unmaintained and not supported.
+# Last snapshot shipping that is 98.
+Drop: src:batman
+
 # Ensure we keep high-priority packages
 Keep: priority:1002
 
