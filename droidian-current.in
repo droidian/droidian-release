@@ -63,6 +63,14 @@ Source: droidian:droidian-glib:next-pidfd
 Suites: trixie
 Architectures: amd64 armhf arm64
 
+# 2024-08-21: upower >= 1.90.3 has the fake batteries fix,
+# so the version in the Droidian (prod) archive is not
+# needed anymore. Prefer Debian's until we drop it
+# definitely from there.
+Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowerglib-1.0:amd64 libupower-glib-dev:arm64 libupower-glib-dev:armhf libupower-glib-dev:amd64 libupower-glib3:arm64 libupower-glib3:armhf libupower-glib3:amd64 upower:arm64 upower:armhf upower:amd64 upower-tests:arm64 upower-tests:armhf upower-tests:amd64 upower-doc
+Pin: release o=Droidian
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
