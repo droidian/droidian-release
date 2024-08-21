@@ -80,6 +80,11 @@ Drop: src:linux-android-samsung-star2lte src:linux-android-samsung-crownlte src:
 # Last snapshot shipping that is 98.
 Drop: src:batman
 
+# Drop packages from meta-phosh, which is
+# unused in Droidian since a lot of time
+# and causes confusion
+Drop: src:meta-phosh
+
 # Ensure we keep high-priority packages
 Keep: priority:1002
 
