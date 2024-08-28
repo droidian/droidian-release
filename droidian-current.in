@@ -48,7 +48,7 @@ Architectures: amd64 armhf arm64
 # 2024-07-04: deprefer Debian's libwlroots12t64 to make APT choose
 # the right version. This is only needed during development, and
 # once wlroots is merged can be removed
-Package: libwlroots12t64 libwlroots-dev
+Package: libwlroots12t64:arm64 libwlroots-dev:arm64 libwlroots12t64:armhf libwlroots-dev:armhf libwlroots12t64:amd64 libwlroots-dev:amd64
 Pin: version 0.17.4-1+b1
 Pin-Priority: -1
 
