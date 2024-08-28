@@ -71,6 +71,28 @@ Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowergl
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# Droidian 99: Add new graphical stack. This stack
+# will be merged during Droidian 100 development, but
+# for now keep it as feature branches to be able to easily
+# drop them from 99 if there are issues
+Source: droidian:droidian-wlroots:next-upgrade-0-17-4
+Suites: trixie
+Architectures: amd64 armhf arm64
+
+Source: droidian:droidian-phoc:next-upgrade-0-40-0
+Suites: trixie
+Architectures: amd64 armhf arm64
+
+Source: droidian:droidian-phosh:next-wlroots-0-17
+Suites: trixie
+Architectures: amd64 armhf arm64
+
+# 2024-08-29: with newer phoc, we can use Debian's
+# phosh-mobile-settings
+Package: phosh-mobile-settings:arm64 phosh-mobile-settings:amd64 phosh-mobile-settings:armhf
+Pin: release o=Droidian
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
