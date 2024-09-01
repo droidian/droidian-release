@@ -93,6 +93,13 @@ Package: phosh-mobile-settings:arm64 phosh-mobile-settings:amd64 phosh-mobile-se
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2024-09-01: an old version of phosh-osk-stub is
+# sticking around in the Droidian archives, and we
+# probably don't want that
+Package: phosh-osk-stub:arm64 phosh-osk-stub:armhf phosh-osk-stub:amd64
+Pin: release o=Droidian
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
