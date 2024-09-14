@@ -100,6 +100,22 @@ Package: phosh-osk-stub:arm64 phosh-osk-stub:armhf phosh-osk-stub:amd64
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2024-09-15: some other parts of GNOME 47 not yet in sid
+Source: debian-snapshot:@DEBIAN_SNAPSHOT@
+Suites: experimental
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+# Deprefer everything from experimental
+Package: *
+Pin: release a=experimental
+Pin-Priority: -1
+
+# ...except these packages:
+Package: gnome-software:arm64 gnome-software:armhf gnome-software:amd64 gnome-software-common:arm64 gnome-software-common:armhf gnome-software-common:amd64 gnome-software-dev:arm64 gnome-software-dev:armhf gnome-software-dev:amd64 gnome-software-doc:arm64 gnome-software-doc:armhf gnome-software-doc:amd64 gnome-software-plugin-deb:arm64 gnome-software-plugin-deb:armhf gnome-software-plugin-deb:amd64 gnome-software-plugin-flatpak:arm64 gnome-software-plugin-flatpak:armhf gnome-software-plugin-flatpak:amd64 gnome-software-plugin-fwupd:arm64 gnome-software-plugin-fwupd:armhf gnome-software-plugin-fwupd:amd64 gnome-software-plugin-snap:arm64 gnome-software-plugin-snap:armhf gnome-software-plugin-snap:amd64 gir1.2-gtk-4.0:arm64 gir1.2-gtk-4.0:armhf gir1.2-gtk-4.0:amd64 gtk-4-examples:arm64 gtk-4-examples:armhf gtk-4-examples:amd64 gtk-4-tests:arm64 gtk-4-tests:armhf gtk-4-tests:amd64 libgtk-4-1:arm64 libgtk-4-1:armhf libgtk-4-1:amd64 libgtk-4-bin:arm64 libgtk-4-bin:armhf libgtk-4-bin:amd64 libgtk-4-common:arm64 libgtk-4-common:armhf libgtk-4-common:amd64 libgtk-4-dev:arm64 libgtk-4-dev:armhf libgtk-4-dev:amd64 libgtk-4-doc:arm64 libgtk-4-doc:armhf libgtk-4-doc:amd64 libgtk-4-media-gstreamer:arm64 libgtk-4-media-gstreamer:armhf libgtk-4-media-gstreamer:amd64 gir1.2-adw-1:arm64 gir1.2-adw-1:armhf gir1.2-adw-1:amd64 libadwaita-1-0:arm64 libadwaita-1-0:armhf libadwaita-1-0:amd64 libadwaita-1-dev:arm64 libadwaita-1-dev:armhf libadwaita-1-dev:amd64 libadwaita-1-doc:arm64 libadwaita-1-doc:armhf libadwaita-1-doc:amd64 libadwaita-1-examples:arm64 libadwaita-1-examples:armhf libadwaita-1-examples:amd64 gnome-calculator:arm64 gnome-calculator:armhf gnome-calculator:amd64 gnome-calendar:arm64 gnome-calendar:armhf gnome-calendar:amd64 gnome-text-editor:arm64 gnome-text-editor:armhf gnome-text-editor:amd64 gir1.2-spelling-1:arm64 gir1.2-spelling-1:armhf gir1.2-spelling-1:amd64 libspelling-1-2:arm64 libspelling-1-2:armhf libspelling-1-2:amd64 libspelling-1-dev:arm64 libspelling-1-dev:armhf libspelling-1-dev:amd64 libspelling-1-doc:arm64 libspelling-1-doc:armhf libspelling-1-doc:amd64 libspelling-1-tests:arm64 libspelling-1-tests:armhf libspelling-1-tests:amd64 gir1.2-goa-1.0:arm64 gir1.2-goa-1.0:armhf gir1.2-goa-1.0:amd64 gnome-online-accounts:arm64 gnome-online-accounts:armhf gnome-online-accounts:amd64 libgoa-1.0-0b:arm64 libgoa-1.0-0b:armhf libgoa-1.0-0b:amd64 libgoa-1.0-common:arm64 libgoa-1.0-common:armhf libgoa-1.0-common:amd64 libgoa-1.0-dev:arm64 libgoa-1.0-dev:armhf libgoa-1.0-dev:amd64 libgoa-1.0-doc:arm64 libgoa-1.0-doc:armhf libgoa-1.0-doc:amd64 libgoa-backend-1.0-2:arm64 libgoa-backend-1.0-2:armhf libgoa-backend-1.0-2:amd64 libgoa-backend-1.0-dev:arm64 libgoa-backend-1.0-dev:armhf libgoa-backend-1.0-dev:amd64
+Pin: release a=experimental
+Pin-Priority: 1001
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
