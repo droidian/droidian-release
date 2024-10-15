@@ -35,11 +35,6 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# 2024-07-03: use a version of chatty with a fix for to Chatty#893
-Source: droidian:droidian-chatty:next-notification-fix
-Suites: trixie
-Architectures: amd64 armhf arm64
-
 # 2024-07-31: network-manager: remove GDBusObjectManagerClient hack
 Source: droidian:droidian-network-manager:next-wwan-fix
 Suites: trixie
