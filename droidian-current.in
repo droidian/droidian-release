@@ -10,34 +10,16 @@ Suites: trixie
 Components: main
 Architectures: amd64 armhf arm64
 
-# A phone-focused fork of gnome-clocks, to be
-# used until GNOME Clocks gets a proper adaptive redesign.
-Source: droidian:droidian-gnome-clocks:next-upgrade-46-0
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
 # Droidian: use a version of gst-plugins-bad1.0 without
 # the uvch264 module built-in
 Source: droidian:droidian-gst-plugins-bad1.0:next-workaround-disable-uvch264
 Suites: trixie
 Architectures: armhf arm64
 
-# callaudiod: still WIP
-Source: droidian:droidian-callaudiod:next-droid-0-1-4
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
 # 2024-05-03: snapshot-aware droidian-release
 Source: droidian:droidian-droidian-release:trixie-snapshots
 Suites: trixie
 Components: main
-Architectures: amd64 armhf arm64
-
-# 2024-07-31: network-manager: remove GDBusObjectManagerClient hack
-Source: droidian:droidian-network-manager:next-wwan-fix
-Suites: trixie
 Architectures: amd64 armhf arm64
 
 # 2024-07-04: deprefer Debian's libwlroots12t64 to make APT choose
@@ -47,21 +29,6 @@ Package: libwlroots12t64:arm64 libwlroots-dev:arm64 libwlroots12t64:armhf libwlr
 Pin: version 0.17.4-1+b1
 Pin-Priority: -1
 
-# 2024-08-04: firefox mobile config with Droidian characteristics 
-Source: droidian:droidian-firefox-esr-mobile-config:next-tabs
-Suites: trixie
-Architectures: amd64 armhf arm64
-
-Source: droidian:droidian-firefox-esr-mobile-config:next-firefox
-Suites: trixie
-Architectures: amd64 armhf arm64
-
-# 2024-08-15: prefer glib version with fix for pid tracking on
-# older kernels
-Source: droidian:droidian-glib:next-pidfd
-Suites: trixie
-Architectures: amd64 armhf arm64
-
 # 2024-08-21: upower >= 1.90.3 has the fake batteries fix,
 # so the version in the Droidian (prod) archive is not
 # needed anymore. Prefer Debian's until we drop it
@@ -69,22 +36,6 @@ Architectures: amd64 armhf arm64
 Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowerglib-1.0:amd64 libupower-glib-dev:arm64 libupower-glib-dev:armhf libupower-glib-dev:amd64 libupower-glib3:arm64 libupower-glib3:armhf libupower-glib3:amd64 upower:arm64 upower:armhf upower:amd64 upower-tests:arm64 upower-tests:armhf upower-tests:amd64 upower-doc
 Pin: release o=Droidian
 Pin-Priority: -1
-
-# Droidian 99: Add new graphical stack. This stack
-# will be merged during Droidian 100 development, but
-# for now keep it as feature branches to be able to easily
-# drop them from 99 if there are issues
-Source: droidian:droidian-wlroots:next-upgrade-0-17-4
-Suites: trixie
-Architectures: amd64 armhf arm64
-
-Source: droidian:droidian-phoc:next-upgrade-0-40-0
-Suites: trixie
-Architectures: amd64 armhf arm64
-
-Source: droidian:droidian-phosh:next-wlroots-0-17
-Suites: trixie
-Architectures: amd64 armhf arm64
 
 # 2024-08-29: with newer phoc, we can use Debian's
 # phosh-mobile-settings
