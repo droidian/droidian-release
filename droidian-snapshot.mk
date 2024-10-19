@@ -10,6 +10,7 @@ DROIDIAN_UPDATE_FROM = 99
 # Droidian feature branches to inject
 DROIDIAN_FEATURE_BRANCHES = \
  droidian-gnome-clocks:next-upgrade-47 \
+ droidian-gnome-control-center:next-upgrade-47-rebase \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-glib:next-pidfd \
