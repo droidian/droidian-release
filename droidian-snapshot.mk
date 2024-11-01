@@ -18,4 +18,5 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-xdg-desktop-portal-phosh:next-accents \
  droidian-wlroots:next-upgrade-0-17-4 \
  droidian-phoc:next-upgrade-0-40-0 \
+ droidian-phosh-osk-stub:next-upgrade-0-43 \
  droidian-phosh:next-wlroots-0-17
