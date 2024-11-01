@@ -11,7 +11,7 @@ DROIDIAN_UPDATE_FROM = 99
 DROIDIAN_FEATURE_BRANCHES = \
  droidian-gnome-clocks:next-upgrade-47 \
  droidian-gnome-control-center:next-upgrade-47-rebase \
- droidian-gnome-settings-daemon:next-upgrade-47 \
+ droidian-gnome-settings-daemon:next-upgrade-47-autobrightness \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-glib:next-pidfd \
