@@ -43,6 +43,17 @@ Package: phosh-mobile-settings:arm64 phosh-mobile-settings:amd64 phosh-mobile-se
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2024-11-04: deprefer pycodestyle 2.12.1-1 to avoid
+# getting caught in the pycodestyle migration
+Source: debian-snapshot:20241101T025324Z
+Suites: @DEBIAN_SUITE@
+Components: main
+Architectures: amd64 armhf arm64
+
+Package: pycodestyle python3-pycodestyle
+Pin: version 2.12.1-1
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
