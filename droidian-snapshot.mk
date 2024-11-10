@@ -16,6 +16,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-glib:next-pidfd \
  droidian-gtk4:next-droidian-4-16 \
+ droidian-gnome-initial-setup:next-droidian-47 \
  droidian-xdg-desktop-portal-phosh:next-accents \
  droidian-wlroots:next-upgrade-0-17-4 \
  droidian-wayfire:next-upgrade-0-9-0 \
