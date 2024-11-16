@@ -1,0 +1,24 @@
+#!/bin/bash
+
+. /etc/os-release
+
+send_notification() {
+	prio="${1}"
+	subject="${2}"
+	body="${3}"
+
+	notify-send \
+		-a "${NAME}" \
+		-i emblem-droidian \
+		-u "${prio}" \
+		"${subject}" \
+		"${body}"
+}
+
+# Wait a bit to catch the user's attention
+sleep 10
+
+send_notification normal "System update completed" "You successfully updated to ${PRETTY_NAME}."
+
+
+exit 0

@@ -1,1 +1,3 @@
 out/info/* /usr/share/droidian-release
+runonce/scripts/* /usr/share/runonce/scripts/
+runonce/targets/* /usr/share/runonce/targets/

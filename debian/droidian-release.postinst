@@ -35,6 +35,10 @@ configure() {
 	# TODO: remove when migration is not necessary anymore
 	upgrade_from_branding
 
+	if [ -n "${1}" ]; then
+		runonce-queue droidian-upgrade #DROIDIAN_INTERNAL_VERSION#
+	fi
+
 	# Divert os infos
 	if ! [ -e "/usr/lib/droidian-release/os-release.debian" ]; then
 		dpkg-divert \
@@ -69,7 +73,7 @@ configure() {
 
 case "${1}" in
 	configure)
-		configure
+		configure "${2}"
 		;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

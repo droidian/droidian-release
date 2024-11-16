@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
+include $(CURDIR)/droidian-snapshot.mk
+
 %:
 	dh $@
+
+override_dh_installdeb:
+	dh_installdeb --define DROIDIAN_INTERNAL_VERSION=$(DROIDIAN_INTERNAL_VERSION)
