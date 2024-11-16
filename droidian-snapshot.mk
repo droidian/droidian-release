@@ -1,8 +1,21 @@
 # Control file for the current Droidian snapshot.
 
+# The base Debian snapshot
 DEBIAN_SNAPSHOT = 20241104T150945Z
+
+# The base Debian suite
 DEBIAN_SUITE = sid
+
+# The "pretty" Droidian version
 DROIDIAN_VERSION = 100
+
+# The internal Droidian version
+# It must be an integer. Current format is:
+# (Major)(Minor)(Patch)
+# i.e. for Droidian 100, (100)(0)(0) = 10000
+#      for Droidian 100.1, (100)(1)(0) = 10010
+#      for Droidian 100.1.1, (100)(1)(1) = 10011
+DROIDIAN_INTERNAL_VERSION = 10000
 
 # Update info
 DROIDIAN_UPDATE_FROM = 99
