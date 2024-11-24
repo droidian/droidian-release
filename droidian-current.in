@@ -43,6 +43,17 @@ Package: phosh-mobile-settings:arm64 phosh-mobile-settings:amd64 phosh-mobile-se
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2024-11-25: deprefer ppp 2.5.1-1+1 to avoid
+# getting caught in its migration
+Source: debian-snapshot:20241121T024644Z
+Suites: @DEBIAN_SUITE@
+Components: main
+Architectures: amd64 armhf arm64
+
+Package: ppp:arm64 ppp:armhf ppp:amd64 ppp-dev:arm64 ppp-dev:armhf ppp-dev:amd64 ppp-udeb:arm64 ppp-udeb:armhf ppp-udeb:amd64
+Pin: version 2.5.1-1+1
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
