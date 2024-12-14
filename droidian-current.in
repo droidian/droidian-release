@@ -75,7 +75,7 @@ Keep: origin:Droidian
 Update-From: @DROIDIAN_UPDATE_FROM@
 
 # Finally publish the snapshot
-Target: ./droidian-snapshots/@DROIDIAN_VERSION@/
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@-base/
 Suites: rolling
 Architectures: amd64 armhf arm64
 Components: main contrib non-free

@@ -27,7 +27,7 @@ out/droidian-current: droidian-current.in
 		echo "\nSource: droidian:$${feature_branch}\nSuites: trixie\nComponents: main\nArchitectures: amd64 armhf arm64" >> out/droidian-current ; \
 	done
 
-snapshot-control: out/droidian-current out/droidian-update out/support/buildd_support.list
+snapshot-control: out/droidian-current out/droidian-current.updates out/droidian-update out/support/buildd_support.list
 
 release: out/info/droidian-release out/info/issue out/info/issue.net out/info/os-release
 

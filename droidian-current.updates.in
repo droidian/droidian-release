@@ -1,0 +1,39 @@
+# This is the Droidian snapshot used as a base
+Source: droidian-snapshot:@DROIDIAN_VERSION@-base
+Suites: rolling
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+# These are the update packages overlayed on top
+Source: droidian-group:droidian:@DROIDIAN_VERSION@-updates
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+Optional: yes
+
+Source: droidian-group:droidian-devices:@DROIDIAN_VERSION@-updates
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+Optional: yes
+
+# Always prefer update packages
+Package: *
+Pin: release l=Droidian\ (group-droidian-@DROIDIAN_VERSION@-updates channel)
+Pin-Priority: 1050
+
+Package: *
+Pin: release l=Droidian\ (group-droidian-devices-@DROIDIAN_VERSION@-updates channel)
+Pin-Priority: 1050
+
+# Ensure we keep high-priority packages
+Keep: priority:1050
+
+# Finally publish the snapshot
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@/
+Suites: rolling
+Architectures: amd64 armhf arm64
+Components: main contrib non-free
+Origin: Droidian
+Label: Droidian (snapshot)
+Version: @DROIDIAN_VERSION@
