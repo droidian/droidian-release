@@ -32,7 +32,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-gnome-initial-setup:next-droidian-47 \
  droidian-xdg-desktop-portal-phosh:next-accents \
  droidian-wlroots:next-upgrade-0-17-4 \
- droidian-wayfire:next-upgrade-0-9-0 \
- droidian-phoc:next-upgrade-0-40-0 \
- droidian-phosh-osk-stub:next-upgrade-0-43 \
- droidian-phosh:next-wlroots-0-17
+ droidian-wayfire:next-upgrade-0-9-0
+
+DROIDIAN_GROUPS = \
+ droidian:next-upgrade-0-44
