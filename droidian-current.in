@@ -37,6 +37,12 @@ Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowergl
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2024-12-25: pin old gnome-control-center until
+# latest mobile-power-saver is out of staging
+Package: gnome-control-center:arm64 gnome-control-center:amd64 gnome-control-center:armhf gnome-control-center-dev:arm64 gnome-control-center-dev:amd64 gnome-control-center-dev:armhf gnome-control-center-dbgsym:arm64 gnome-control-center-dbgsym:amd64 gnome-control-center-dbgsym:armhf gnome-control-center-data
+Pin: version 1:47.1.1-1~git20241120213941.8ab6ddb.next.upgrade.47.rebase
+Pin-Priority: 1050
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
