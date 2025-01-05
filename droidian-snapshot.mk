@@ -15,7 +15,7 @@ DROIDIAN_VERSION = 101
 # i.e. for Droidian 100, (100)(0)(0) = 10000
 #      for Droidian 100.1, (100)(1)(0) = 10010
 #      for Droidian 100.1.1, (100)(1)(1) = 10011
-DROIDIAN_INTERNAL_VERSION = 10001
+DROIDIAN_INTERNAL_VERSION = 10100
 
 # Update info
 DROIDIAN_UPDATE_FROM = 100
