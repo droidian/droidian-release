@@ -17,6 +17,12 @@ Components: main
 Architectures: amd64 armhf arm64
 Optional: yes
 
+Source: droidian-group:droidian:@DROIDIAN_VERSION@-security
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+Optional: yes
+
 # Always prefer update packages
 Package: *
 Pin: release l=Droidian\ (group-droidian-@DROIDIAN_VERSION@-updates channel)
@@ -26,7 +32,12 @@ Package: *
 Pin: release l=Droidian\ (group-droidian-devices-@DROIDIAN_VERSION@-updates channel)
 Pin-Priority: 1050
 
+Package: *
+Pin: release l=Droidian\ (group-droidian-@DROIDIAN_VERSION@-security channel)
+Pin-Priority: 1049
+
 # Ensure we keep high-priority packages
+Keep: priority:1049
 Keep: priority:1050
 
 # Finally publish the snapshot
