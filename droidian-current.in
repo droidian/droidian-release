@@ -43,6 +43,11 @@ Suites: @DEBIAN_SUITE@
 Components: main
 Architectures: amd64 armhf arm64
 
+# 2025-01-20: hadess-sensorfw-proxy test
+Package: hadess-sensorfw-proxy:arm64 hadess-sensorfw-proxy:armhf hadess-sensorfw-proxy:amd64
+Pin: version 0.2.0+z1+git20231230010701.3505c29.trixie.production
+Pin-Priority: -1
+
 Package: apt:amd64 apt:arm64 apt:armhf apt-transport-https:amd64 apt-transport-https:arm64 apt-transport-https:armhf apt-utils:amd64 apt-utils:arm64 apt-utils:armhf libapt-pkg-dev:amd64 libapt-pkg-dev:arm64 libapt-pkg-dev:armhf libapt-pkg-doc:amd64 libapt-pkg-doc:arm64 libapt-pkg-doc:armhf libapt-pkg6.0t64:amd64 libapt-pkg6.0t64:arm64 libapt-pkg6.0t64:armhf apt-doc
 Pin: version 2.9.21
 Pin-Priority: -1
