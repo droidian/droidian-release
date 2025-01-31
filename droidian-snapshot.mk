@@ -31,6 +31,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-glib:next-pidfd \
  droidian-gtk4:next-droidian-4-16 \
  droidian-gmobile:next-upgrade-0-2 \
+ droidian-ofono2mm:next-calls-mm \
  droidian-hadess-sensorfw-proxy:next-testing \
  droidian-ofono-binder-plugin:next-powersaving \
  droidian-gnome-initial-setup:next-droidian-47 \
