@@ -34,6 +34,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-ofono2mm:next-calls-mm \
  droidian-hadess-sensorfw-proxy:next-testing \
  droidian-ofono-binder-plugin:next-powersaving \
+ droidian-pulseaudio-config-droid:next-gnumdk-autoswitch \
  droidian-gnome-initial-setup:next-droidian-47 \
  droidian-wlroots:next-upgrade-0-17-4 \
  droidian-wayfire:next-upgrade-0-9-0
