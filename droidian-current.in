@@ -52,6 +52,43 @@ Package: apt:amd64 apt:arm64 apt:armhf apt-transport-https:amd64 apt-transport-h
 Pin: version 2.9.21
 Pin-Priority: -1
 
+# 2025-03-18: 101 will still ship gtk 4.16, hold revdeps
+Source: debian-snapshot:20250203T205752Z
+Suites: @DEBIAN_SUITE@
+Components: main
+Architectures: amd64 armhf arm64
+
+Package: nautilus:arm64 nautilus:armhf nautilus:amd64 libnautilus-extension4:arm64 libnautilus-extension4:armhf libnautilus-extension4:amd64 libnautilus-extension-dev:arm64 libnautilus-extension-dev:armhf libnautilus-extension-dev:amd64 gir1.2-nautilus-4.0:arm64 gir1.2-nautilus-4.0:armhf gir1.2-nautilus-4.0:amd64 nautilus-data
+Pin: version 48~beta-2
+Pin-Priority: -1
+
+Package: librust-gtk4-dev:arm64 librust-gtk4-dev:armhf librust-gtk4-dev:amd64
+Pin: version 0.9.6-1
+Pin-Priority: -1
+
+Package: gnome-calculator:arm64 gnome-calculator:armhf gnome-calculator:amd64
+Pin: version 1:48~beta-1
+Pin-Priority: -1
+
+Package: gnome-text-editor:arm64 gnome-text-editor:armhf gnome-text-editor:amd64
+Pin: version 48~rc-1
+Pin-Priority: -1
+
+Package: libgtkmm-4.0-0:arm64 libgtkmm-4.0-0:armhf libgtkmm-4.0-0:amd64 libgtkmm-4.0-0-dev:arm64 libgtkmm-4.0-0-dev:armhf libgtkmm-4.0-0-dev:amd64 libgtkmm-4.0-doc
+Pin: version 4.17.0-2
+Pin-Priority: -1
+
+Package: gir1.2-gtksource-5:arm64 gir1.2-gtksource-5:armhf gir1.2-gtksource-5:amd64 libgtksourceview-5-0:arm64 libgtksourceview-5-0:armhf libgtksourceview-5-0:amd64 libgtksourceview-5-dev:arm64 libgtksourceview-5-dev:armhf libgtksourceview-5-dev:amd64 libgtksourceview-5-tests:arm64 libgtksourceview-5-tests:armhf libgtksourceview-5-tests:amd64 libgtksourceview-5-common libgtksourceview-5-doc
+Pin: version 5.15.1-1
+Pin-Priority: -1
+
+Package: xdg-desktop-portal-gnome:arm64 xdg-desktop-portal-gnome:armhf xdg-desktop-portal-gnome:amd64
+Pin: version 48~rc-1
+Pin-Priority: -1
+
+Drop: src:papers
+## END gtk 4.16 stuff
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
