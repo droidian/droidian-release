@@ -22,6 +22,7 @@ DROIDIAN_UPDATE_FROM = 100
 
 # Droidian feature branches to inject
 DROIDIAN_FEATURE_BRANCHES = \
+ droidian-geoclue:next-2-7-2 \
  droidian-systemd:next-upgrade-257 \
  droidian-gnome-clocks:next-upgrade-47 \
  droidian-gnome-control-center:next-upgrade-47-rebase \
