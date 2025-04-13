@@ -39,6 +39,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-pulseaudio-config-droid:next-gnumdk-autoswitch \
  droidian-gnome-initial-setup:next-droidian-47 \
  droidian-wlroots:next-upgrade-0-17-4 \
+ droidian-wlroots:next-backport-0-18 \
  droidian-wayfire:next-upgrade-0-9-0
 
 DROIDIAN_GROUPS = \
