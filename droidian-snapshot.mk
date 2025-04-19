@@ -1,13 +1,13 @@
 # Control file for the current Droidian snapshot.
 
 # The base Debian snapshot
-DEBIAN_SNAPSHOT = 20250305T204837Z
+DEBIAN_SNAPSHOT = 20250419T084132Z
 
 # The base Debian suite
 DEBIAN_SUITE = sid
 
 # The "pretty" Droidian version
-DROIDIAN_VERSION = 101
+DROIDIAN_VERSION = 101.99
 
 # The internal Droidian version
 # It must be an integer. Current format is:
@@ -18,7 +18,7 @@ DROIDIAN_VERSION = 101
 DROIDIAN_INTERNAL_VERSION = 10100
 
 # Update info
-DROIDIAN_UPDATE_FROM = 100
+DROIDIAN_UPDATE_FROM = 101
 
 # Droidian feature branches to inject
 DROIDIAN_FEATURE_BRANCHES = \
