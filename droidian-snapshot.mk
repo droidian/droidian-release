@@ -31,7 +31,6 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-glib:next-pidfd \
- droidian-gtk4:next-droidian-4-16 \
  droidian-gmobile:next-upgrade-0-2 \
  droidian-ofono2mm:next-calls-mm \
  droidian-hadess-sensorfw-proxy:next-testing \
