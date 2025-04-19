@@ -2,6 +2,8 @@
 
 include droidian-snapshot.mk
 
+DROIDIAN_VERSION_SLUG := $(subst .,-,$(strip $(DROIDIAN_VERSION)))
+
 all: snapshot-control release
 
 out/%: %.in
@@ -10,6 +12,7 @@ out/%: %.in
 		-e 's|@DEBIAN_SNAPSHOT@|$(DEBIAN_SNAPSHOT)|g' \
 		-e 's|@DEBIAN_SUITE@|$(DEBIAN_SUITE)|g' \
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
+		-e 's|@DROIDIAN_VERSION_SLUG@|$(DROIDIAN_VERSION_SLUG)|g' \
 		-e 's|@DROIDIAN_INTERNAL_VERSION@|$(DROIDIAN_INTERNAL_VERSION)|g' \
 		-e 's|@DROIDIAN_UPDATE_FROM@|$(DROIDIAN_UPDATE_FROM)|g' \
 		$*.in > out/$*
@@ -20,6 +23,7 @@ out/droidian-current: droidian-current.in
 		-e 's|@DEBIAN_SNAPSHOT@|$(DEBIAN_SNAPSHOT)|g' \
 		-e 's|@DEBIAN_SUITE@|$(DEBIAN_SUITE)|g' \
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
+		-e 's|@DROIDIAN_VERSION_SLUG@|$(DROIDIAN_VERSION_SLUG)|g' \
 		-e 's|@DROIDIAN_UPDATE_FROM@|$(DROIDIAN_UPDATE_FROM)|g' \
 		droidian-current.in > out/droidian-current
 
