@@ -25,9 +25,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-geoclue:next-2-7-2 \
  droidian-feedbackd:next-upgrade-0-8 \
  droidian-systemd:next-upgrade-257 \
- droidian-gnome-clocks:next-upgrade-47 \
  droidian-gnome-control-center:next-upgrade-47-rebase \
- droidian-gnome-settings-daemon:next-upgrade-47-autobrightness \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-glib:next-pidfd \
