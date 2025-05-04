@@ -1,7 +1,7 @@
 # Control file for the current Droidian snapshot.
 
 # The base Debian snapshot
-DEBIAN_SNAPSHOT = 20250427T151625Z
+DEBIAN_SNAPSHOT = 20250504T091840Z
 
 # The base Debian suite
 DEBIAN_SUITE = sid
