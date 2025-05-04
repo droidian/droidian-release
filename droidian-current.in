@@ -35,6 +35,15 @@ Package: hadess-sensorfw-proxy:arm64 hadess-sensorfw-proxy:armhf hadess-sensorfw
 Pin: version 0.2.0+git20250117070035.757f58d.next.testing
 Pin-Priority: 1003
 
+# 2025-05-04: only keep libwlroots12t64 around
+Package: libwlroots12t64:arm64 libwlroots12t64:armhf libwlroots12t64:amd64 libwlroots12t64-dbgsym:arm64 libwlroots12t64-dbgsym:armhf libwlroots12t64-dbgsym:amd64
+Pin: version 0.17.4-1~git20250504171846.5b46bfe.next.upgrade.0.17.4.no.libdroid
+Pin-Priority: 1003
+
+Package: libwlroots-examples:armhf libwlroots-examples:arm64 libwlroots-examples:amd64 libwlroots-examples-dbgsym:arm64 libwlroots-examples-dbgsym:armhf libwlroots-examples-dbgsym:amd64 libwlroots-dev:arm64 libwlroots-dev:armhf libwlroots-dev:amd64 
+Pin: version 0.17.4-1~git20250504171846.5b46bfe.next.upgrade.0.17.4.no.libdroid
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
