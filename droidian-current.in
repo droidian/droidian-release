@@ -44,6 +44,17 @@ Package: libwlroots-examples:armhf libwlroots-examples:arm64 libwlroots-examples
 Pin: version 0.17.4-1~git20250504171846.5b46bfe.next.upgrade.0.17.4.no.libdroid
 Pin-Priority: -1
 
+# 2025-05-05: some devices have unreliable battery
+# status with latest upower
+Source: debian-snapshot:20250301T025722Z
+Suites: @DEBIAN_SUITE@
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowerglib-1.0:amd64 libupower-glib-dev:arm64 libupower-glib-dev:armhf libupower-glib-dev:amd64 libupower-glib3:arm64 libupower-glib3:armhf libupower-glib3:amd64 upower:arm64 upower:armhf upower:amd64 upower-tests:arm64 upower-tests:armhf upower-tests:amd64 upower-doc
+Pin: version 1.90.9-1
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
