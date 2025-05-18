@@ -2,6 +2,12 @@
 
 include droidian-snapshot.mk
 
+ifeq ($(IS_DEVELOPMENT), 1)
+DROIDIAN_RELEASE_TYPE = development
+else
+DROIDIAN_RELEASE_TYPE = stable
+endif
+
 all: snapshot-control release
 
 out/%: %.in
@@ -12,6 +18,7 @@ out/%: %.in
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
 		-e 's|@DROIDIAN_INTERNAL_VERSION@|$(DROIDIAN_INTERNAL_VERSION)|g' \
 		-e 's|@DROIDIAN_UPDATE_FROM@|$(DROIDIAN_UPDATE_FROM)|g' \
+		-e 's|@DROIDIAN_RELEASE_TYPE@|$(DROIDIAN_RELEASE_TYPE)|g' \
 		$*.in > out/$*
 
 out/droidian-current: droidian-current.in
@@ -21,6 +28,7 @@ out/droidian-current: droidian-current.in
 		-e 's|@DEBIAN_SUITE@|$(DEBIAN_SUITE)|g' \
 		-e 's|@DROIDIAN_VERSION@|$(DROIDIAN_VERSION)|g' \
 		-e 's|@DROIDIAN_UPDATE_FROM@|$(DROIDIAN_UPDATE_FROM)|g' \
+		-e 's|@DROIDIAN_RELEASE_TYPE@|$(DROIDIAN_RELEASE_TYPE)|g' \
 		droidian-current.in > out/droidian-current
 
 	for feature_branch in $(DROIDIAN_FEATURE_BRANCHES); do \

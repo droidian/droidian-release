@@ -1,5 +1,9 @@
 # Control file for the current Droidian snapshot.
 
+# Set this flag to 1 if this release is in development,
+# to 0 if not.
+IS_DEVELOPMENT = 1
+
 # The base Debian snapshot
 DEBIAN_SNAPSHOT = 20250517T203043Z
 
