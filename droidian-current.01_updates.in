@@ -41,7 +41,7 @@ Keep: priority:1049
 Keep: priority:1050
 
 # Finally publish the snapshot
-Target: ./droidian-snapshots/@DROIDIAN_VERSION@/
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@/
 Suites: rolling
 Architectures: amd64 armhf arm64
 Components: main contrib non-free

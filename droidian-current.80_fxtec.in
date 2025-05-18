@@ -1,7 +1,7 @@
 # Droidian fxtec variant
 
 # This is the Droidian snapshot used as a base
-Source: droidian-snapshot:@DROIDIAN_VERSION@
+Source: droidian-snapshot:@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@
 Suites: rolling
 Components: main contrib non-free
 Architectures: arm64
@@ -29,7 +29,7 @@ Pin-Priority: 1050
 Keep: priority:1050
 
 # Finally publish the snapshot
-Target: ./droidian-snapshots/@DROIDIAN_VERSION@-fxtec/
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@-fxtec/
 Suites: rolling
 Architectures: arm64
 Components: main contrib non-free

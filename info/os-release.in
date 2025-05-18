@@ -1,4 +1,4 @@
-PRETTY_NAME="Droidian @DROIDIAN_VERSION@"
+PRETTY_NAME="Droidian @DROIDIAN_VERSION@ (@DROIDIAN_PATCHLEVEL_PRETTY@)"
 NAME="Droidian"
 VENDOR_NAME="Droidian Project"
 VERSION=@DROIDIAN_VERSION@
@@ -7,3 +7,4 @@ ID=droidian
 ID_LIKE="debian"
 HOME_URL="https://droidian.org/"
 BUG_REPORT_URL="https://github.com/droidian/meta/issues"
+DROIDIAN_PATCHLEVEL=@DROIDIAN_PATCHLEVEL@
