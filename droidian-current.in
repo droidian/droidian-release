@@ -94,3 +94,4 @@ Components: main contrib non-free
 Origin: Droidian
 Label: Droidian (snapshot)
 Version: @DROIDIAN_VERSION@
+Locked: @DROIDIAN_LOCKED_SNAPSHOT@

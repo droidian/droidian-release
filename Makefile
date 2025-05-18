@@ -9,6 +9,7 @@ DROIDIAN_RELEASE_TYPE = development
 DROIDIAN_PATCHLEVEL = $(shell date -u '+%Y%m%d')
 DROIDIAN_PATCHLEVEL_PRETTY = $(shell date -u '+%Y-%m-%d')
 DROIDIAN_PATCHLEVEL_SNAPSHOT = devel
+DROIDIAN_LOCKED_SNAPSHOT = no
 else
 DROIDIAN_RELEASE_TYPE = stable
 
@@ -16,6 +17,7 @@ DROIDIAN_RELEASE_TYPE = stable
 DROIDIAN_PATCHLEVEL ?= $(shell date -u '+%Y%m%d')
 DROIDIAN_PATCHLEVEL_PRETTY ?= $(shell date -u '+%Y-%m-%d')
 DROIDIAN_PATCHLEVEL_SNAPSHOT = $(DROIDIAN_PATCHLEVEL)
+DROIDIAN_LOCKED_SNAPSHOT = yes
 endif
 
 all: snapshot-control release
@@ -32,6 +34,7 @@ out/%: %.in
 		-e 's|@DROIDIAN_PATCHLEVEL@|$(DROIDIAN_PATCHLEVEL)|g' \
 		-e 's|@DROIDIAN_PATCHLEVEL_SNAPSHOT@|.$(DROIDIAN_PATCHLEVEL_SNAPSHOT)|g' \
 		-e 's|@DROIDIAN_PATCHLEVEL_PRETTY@|$(DROIDIAN_PATCHLEVEL_PRETTY)|g' \
+		-e 's|@DROIDIAN_LOCKED_SNAPSHOT@|$(DROIDIAN_LOCKED_SNAPSHOT)|g' \
 		$*.in > out/$*
 
 out/droidian-current: droidian-current.in
@@ -45,6 +48,7 @@ out/droidian-current: droidian-current.in
 		-e 's|@DROIDIAN_PATCHLEVEL@|$(DROIDIAN_PATCHLEVEL)|g' \
 		-e 's|@DROIDIAN_PATCHLEVEL_SNAPSHOT@|.$(DROIDIAN_PATCHLEVEL_SNAPSHOT)|g' \
 		-e 's|@DROIDIAN_PATCHLEVEL_PRETTY@|$(DROIDIAN_PATCHLEVEL_PRETTY)|g' \
+		-e 's|@DROIDIAN_LOCKED_SNAPSHOT@|$(DROIDIAN_LOCKED_SNAPSHOT)|g' \
 		droidian-current.in > out/droidian-current
 
 	for feature_branch in $(DROIDIAN_FEATURE_BRANCHES); do \
