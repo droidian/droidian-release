@@ -1,7 +1,7 @@
 # Droidian volla-mimir variant
 
 # This is the Droidian snapshot used as a base
-Source: droidian-snapshot:@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@
+Source: droidian-snapshot:@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@-waydroid13
 Suites: rolling
 Components: main contrib non-free
 Architectures: arm64
