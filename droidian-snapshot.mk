@@ -46,6 +46,6 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-wayfire:next-upgrade-0-9-0
 
 DROIDIAN_GROUPS = \
- droidian:next-phosh-0-46 \
+ droidian:next-phosh-0-47 \
  droidian:next-gnome-48 \
  droidian:next-upgrade-6-3
