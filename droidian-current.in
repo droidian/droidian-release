@@ -61,6 +61,10 @@ Mask: debian-snapshot:20251030T205030Z
 
 Cherry-Pick: src:gnome-session:48.0-2
 
+# 2025-06-27: mask droidian-camera 17 (not going to be shipped in 101)
+Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
+Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
