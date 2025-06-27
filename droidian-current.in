@@ -66,6 +66,10 @@ Architectures: amd64 armhf arm64
 Cherry-Pick: src:pulseaudio:14.2-2+droidian2+z1+git20250527215144.0e3f99a.group.100.backports libwebrtc-audio-processing1:0.3-1
 Priority: 1003
 
+# 2025-06-27: mask droidian-camera 17 (not going to be shipped in 101)
+Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
+Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
