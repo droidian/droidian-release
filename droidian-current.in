@@ -55,17 +55,6 @@ Package: gir1.2-upowerglib-1.0:arm64 gir1.2-upowerglib-1.0:armhf gir1.2-upowergl
 Pin: version 1.90.9-1
 Pin-Priority: -1
 
-# 2025-05-27: use pulseaudio compiled against older webrtc-audio-processing
-# On some devices, the backported patches have some side effects, so revert
-# to a safe situation: we will update Pulseaudio in the near future anyway
-Source: droidian-group:droidian:100-backports
-Suites: trixie
-Components: main
-Architectures: amd64 armhf arm64
-
-Cherry-Pick: src:pulseaudio:14.2-2+droidian2+z1+git20250527215144.0e3f99a.group.100.backports libwebrtc-audio-processing1:0.3-1
-Priority: 1003
-
 # 2025-06-27: mask droidian-camera 17 (not going to be shipped in 101)
 Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
 Priority: -1
