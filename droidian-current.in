@@ -61,6 +61,16 @@ Pin-Priority: -1
 Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
 Priority: -1
 
+# 2025-08-21: cherry-pick newer rustc to build some phosh-adjacent projects
+Source: debian-snapshot:20250821T142439Z
+Suites: @DEBIAN_SUITE@
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+Cherry-Pick: src:rustc:1.86.0+dfsg1-1
+
+Mask: debian-snapshot:20250821T142439Z
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
