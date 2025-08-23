@@ -60,14 +60,19 @@ Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
 Priority: -1
 
 # 2025-08-21: cherry-pick newer rustc to build some phosh-adjacent projects
-Source: debian-snapshot:20250821T142439Z
+Source: debian-snapshot:20250823T144135Z
 Suites: @DEBIAN_SUITE@
 Components: main contrib non-free
 Architectures: amd64 armhf arm64
 
 Cherry-Pick: src:rustc:1.86.0+dfsg1-1
 
-Mask: debian-snapshot:20250821T142439Z
+# 2025-08-23: cherry-pick latest browsers
+Cherry-Pick: src:firefox:142.0-1 src:libvpx:1.15.2-2
+
+Cherry-Pick: src:chromium:139.0.7258.138-1 src:chromium:139.0.7258.127-2 libxml2-16:2.14.5+dfsg-0.1
+
+Mask: debian-snapshot:20250823T144135Z
 
 # Always prefer Droidian packages
 Package: *
