@@ -5,13 +5,13 @@
 IS_DEVELOPMENT = 1
 
 # The base Debian snapshot
-DEBIAN_SNAPSHOT = 20250808T204515Z
+DEBIAN_SNAPSHOT = 20250903T203306Z
 
 # The base Debian suite
 DEBIAN_SUITE = sid
 
 # The "pretty" Droidian version
-DROIDIAN_VERSION = 101
+DROIDIAN_VERSION = 102
 
 # The internal Droidian version
 # It must be an integer. Current format is:
@@ -19,10 +19,10 @@ DROIDIAN_VERSION = 101
 # i.e. for Droidian 100, (100)(0)(0) = 10000
 #      for Droidian 100.1, (100)(1)(0) = 10010
 #      for Droidian 100.1.1, (100)(1)(1) = 10011
-DROIDIAN_INTERNAL_VERSION = 10100
+DROIDIAN_INTERNAL_VERSION = 10200
 
 # Update info
-DROIDIAN_UPDATE_FROM = 100
+DROIDIAN_UPDATE_FROM = 101
 
 # Droidian feature branches to inject
 DROIDIAN_FEATURE_BRANCHES = \
