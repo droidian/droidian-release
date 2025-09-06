@@ -32,7 +32,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-gnome-control-center:next-upgrade-47-rebase \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
- droidian-glib:next-pidfd \
+ droidian-glib:next-pidfd-286 \
  droidian-gtk-3.0:next-upgrade-3-24 \
  droidian-gtk4:next-droidian-4-18 \
  droidian-gmobile:next-upgrade-0-4 \
