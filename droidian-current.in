@@ -35,15 +35,6 @@ Package: hadess-sensorfw-proxy:arm64 hadess-sensorfw-proxy:armhf hadess-sensorfw
 Pin: version 0.2.0+git20250117070035.757f58d.next.testing
 Pin-Priority: 1003
 
-# 2025-05-04: only keep libwlroots12t64 around
-Package: libwlroots12t64:arm64 libwlroots12t64:armhf libwlroots12t64:amd64 libwlroots12t64-dbgsym:arm64 libwlroots12t64-dbgsym:armhf libwlroots12t64-dbgsym:amd64
-Pin: version 0.17.4-1~git20250504171846.5b46bfe.next.upgrade.0.17.4.no.libdroid
-Pin-Priority: 1003
-
-Package: libwlroots-examples:armhf libwlroots-examples:arm64 libwlroots-examples:amd64 libwlroots-examples-dbgsym:arm64 libwlroots-examples-dbgsym:armhf libwlroots-examples-dbgsym:amd64 libwlroots-dev:arm64 libwlroots-dev:armhf libwlroots-dev:amd64 
-Pin: version 0.17.4-1~git20250504171846.5b46bfe.next.upgrade.0.17.4.no.libdroid
-Pin-Priority: -1
-
 # 2025-05-05: some devices have unreliable battery
 # status with latest upower
 Source: debian-snapshot:20250127T205014Z
@@ -54,25 +45,6 @@ Architectures: amd64 armhf arm64
 Mask: debian-snapshot:20250127T205014Z
 
 Cherry-Pick: src:upower:1.90.7-1
-
-# 2025-06-27: mask droidian-camera 17 (not going to be shipped in 101)
-Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
-Priority: -1
-
-# 2025-08-21: cherry-pick newer rustc to build some phosh-adjacent projects
-Source: debian-snapshot:20250823T144135Z
-Suites: @DEBIAN_SUITE@
-Components: main contrib non-free
-Architectures: amd64 armhf arm64
-
-Cherry-Pick: src:rustc:1.86.0+dfsg1-1
-
-# 2025-08-23: cherry-pick latest browsers
-Cherry-Pick: src:firefox:142.0-1 src:libvpx:1.15.2-2
-
-Cherry-Pick: src:chromium:139.0.7258.138-1 src:chromium:139.0.7258.127-2 libxml2-16:2.14.5+dfsg-0.1
-
-Mask: debian-snapshot:20250823T144135Z
 
 # Always prefer Droidian packages
 Package: *
