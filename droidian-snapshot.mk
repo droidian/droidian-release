@@ -2,7 +2,7 @@
 
 # Set this flag to 1 if this release is in development,
 # to 0 if not.
-IS_DEVELOPMENT = 1
+IS_DEVELOPMENT = 0
 
 # The base Debian snapshot
 DEBIAN_SNAPSHOT = 20250808T204515Z
