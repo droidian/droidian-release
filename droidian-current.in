@@ -55,7 +55,7 @@ Architectures: amd64 armhf arm64
 
 Mask: debian-snapshot:20250905T203213Z
 
-Package: src:gtk4
+Package: src:gtk4 gtk-update-icon-cache:arm64 gtk-update-icon-cache:amd64 gtk-update-icon-cache:armhf
 Pin: release o=Droidian
 Pin-Priority: -1
 
