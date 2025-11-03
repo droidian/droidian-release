@@ -50,6 +50,17 @@ Package: src:gtk4 gtk-update-icon-cache:arm64 gtk-update-icon-cache:amd64 gtk-up
 Pin: release o=Droidian
 Pin-Priority: -1
 
+# 2025-11-03: keep older gnome-session until phosh
+# is upgraded to 0.50.x
+Source: debian-snapshot:20251030T205030Z
+Suites: @DEBIAN_SUITE@
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+Mask: debian-snapshot:20251030T205030Z
+
+Cherry-Pick: src:gnome-session:48.0-2
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
