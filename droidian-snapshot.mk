@@ -33,7 +33,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-network-manager:next-wwan-fix \
  droidian-firefox-esr-mobile-config:next-firefox \
  droidian-qt6-base:next-gles \
- droidian-glib:next-pidfd-286 \
+ droidian-glib:next-pidfd-288 \
  droidian-gtk-3.0:next-upgrade-3-24 \
  droidian-gmobile:next-upgrade-0-4 \
  droidian-ofono2mm:next-calls-mm \
