@@ -65,6 +65,11 @@ Cherry-Pick: src:gnome-session:48.0-2
 Cherry-Pick: src:droidian-camera:17+git20250622031445.a00e75c.next.production
 Priority: -1
 
+# 2026-05-08: mask patched evince (not needed anymore now that we have papers instead)
+Package: src:evince:arm64 src:evince:amd64 src:evince:armhf
+Pin: release o=Droidian
+Pin-Priority: -1
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
