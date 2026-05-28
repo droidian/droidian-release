@@ -7,7 +7,7 @@ Components: main contrib non-free
 Architectures: arm64
 
 # These are the F(x)tec specific packages overlayed on top
-Source: droidian-group:droidian:101-keypad-slide-lights
+Source: droidian-group:droidian:102-keypad-slide-lights
 Suites: trixie
 Components: main
 Architectures: arm64
@@ -18,7 +18,7 @@ Components: main
 Architectures: arm64
 
 Package: *
-Pin: release l=Droidian\ (group-droidian-101-keypad-slide-lights channel)
+Pin: release l=Droidian\ (group-droidian-102-keypad-slide-lights channel)
 Pin-Priority: 1050
 
 Package: *
