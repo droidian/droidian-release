@@ -12,17 +12,8 @@ Suites: trixie
 Components: main
 Architectures: arm64
 
-Source: droidian:droidian-libinput:next-upgrade-1-28-0-keypad-slide
-Suites: trixie
-Components: main
-Architectures: arm64
-
 Package: *
 Pin: release l=Droidian\ (group-droidian-102-keypad-slide-lights channel)
-Pin-Priority: 1050
-
-Package: *
-Pin: release l=Droidian\ (droidian-libinput-next-upgrade-1-28-0-keypad-slide\ channel)
 Pin-Priority: 1050
 
 # Ensure we keep high-priority packages
