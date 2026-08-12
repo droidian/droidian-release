@@ -7,6 +7,11 @@ send_notification() {
 	subject="${2}"
 	body="${3}"
 
+	if ! which notify-send &>/dev/null; then
+		echo "E: notify-send not found, unable to send upgrade complete notification" >&2
+		return 1
+	fi
+
 	notify-send \
 		-a "${NAME}" \
 		-i emblem-droidian \
@@ -20,5 +25,5 @@ sleep 10
 
 send_notification normal "System update completed" "You successfully updated to ${PRETTY_NAME}."
 
-
+# We don't really care if the notification went out or not
 exit 0
