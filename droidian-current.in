@@ -71,6 +71,9 @@ Mask: debian-snapshot:20260426T023822Z
 
 Cherry-Pick: src:lxc:1:6.0.6-3
 
+# 2026-08-13: gdm 50+ has an hard dependency on newer systemds
+Cherry-Pick: src:gdm:49.2-4
+
 # Always prefer Droidian packages
 Package: *
 Pin: release o=Droidian
