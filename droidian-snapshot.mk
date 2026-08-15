@@ -51,6 +51,7 @@ DROIDIAN_FEATURE_BRANCHES = \
 
 DROIDIAN_GROUPS = \
  droidian:next-upgrade-gbinder \
+ droidian:next-legacy \
  droidian:next-phosh-0-47 \
  droidian:next-phosh-0-55 \
  droidian:next-gnome-50
