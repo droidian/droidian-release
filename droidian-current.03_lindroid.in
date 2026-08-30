@@ -1,0 +1,32 @@
+# Experimental variant for lindroid devices
+
+# This is the Droidian snapshot used as a base
+Source: droidian-snapshot:@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@
+Suites: rolling
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+# Debian snapshot
+Source: debian-snapshot:@DEBIAN_SNAPSHOT@
+Suites: @DEBIAN_SUITE@
+Components: main contrib non-free
+Architectures: amd64 armhf arm64
+
+Mask: debian-snapshot:@DEBIAN_SNAPSHOT@
+
+Cherry-Pick: src:wlroots src:phoc src:phosh src:phosh-osk-stevia src:xdg-desktop-portal-phosh
+Origin: debian-snapshot:@DEBIAN_SNAPSHOT@
+Priority: 1010
+
+# Ensure we keep high-priority packages
+Keep: priority:1050
+
+# Finally publish the snapshot
+Target: ./droidian-snapshots/@DROIDIAN_VERSION@@DROIDIAN_PATCHLEVEL_SNAPSHOT@-lindroid/
+Suites: rolling
+Architectures: amd64 armhf arm64
+Components: main contrib non-free
+Origin: Droidian
+Label: Droidian (snapshot)
+Version: @DROIDIAN_VERSION@
+
