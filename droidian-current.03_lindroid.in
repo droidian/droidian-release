@@ -14,7 +14,7 @@ Architectures: amd64 armhf arm64
 
 Mask: debian-snapshot:@DEBIAN_SNAPSHOT@
 
-Cherry-Pick: src:wlroots src:phoc src:phosh src:phosh-osk-stevia src:xdg-desktop-portal-phosh
+Cherry-Pick: src:wlroots src:phoc src:phosh src:phosh-osk-stevia src:xdg-desktop-portal-phosh src:gtk4
 Origin: debian-snapshot:@DEBIAN_SNAPSHOT@
 Priority: 1010
 
