@@ -46,7 +46,7 @@ Mask: debian-snapshot:20250127T205014Z
 
 Cherry-Pick: src:upower:1.90.7-1
 
-Package: src:gtk4 gtk-update-icon-cache:arm64 gtk-update-icon-cache:amd64 gtk-update-icon-cache:armhf
+Package: gtk-update-icon-cache:arm64 gtk-update-icon-cache:amd64 gtk-update-icon-cache:armhf
 Pin: release o=Droidian
 Pin-Priority: -1
 
