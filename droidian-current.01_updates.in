@@ -24,17 +24,36 @@ Architectures: amd64 armhf arm64
 Optional: yes
 
 # 2025-09-27: cherry-pick newer rustc to build some phosh-adjacent projects
-Source: debian-snapshot:20251123T203557Z
+Source: debian-snapshot:20261022T143025Z
 Suites: @DEBIAN_SUITE@
 Components: main contrib non-free
 Architectures: amd64 armhf arm64
 
 # 2025-09-27: cherry-pick latest browsers
-Cherry-Pick: src:firefox:145.0.1-1 src:libvpx:1.15.2-2 src:nss:2:3.117-1
+Cherry-Pick: src:firefox:158.0.1-1 src:libvpx:1.17.0-1 src:nss:2:3.131.1-1
 
-Cherry-Pick: src:chromium:142.0.7444.175-1 libxml2-16:2.15.1+dfsg-0.4)
+Cherry-Pick: src:chromium:156.0.8078.47-1 libxml2-16:2.15.4+dfsg-1
 
-Mask: debian-snapshot:20251123T203557Z
+Cherry-Pick: src:tzdata:2026e-1
+
+Cherry-Pick: src:ca-certificates:20260816+nmu1
+
+Cherry-Pick: src:glibc:2.43-7
+
+Cherry-Pick: src:gcc-16:16.2.0-3
+
+Mask: debian-snapshot:20261022T143025Z
+
+# 2026-10-22: use a libhybris rebuilt against glibc 2.43, in
+# a rather convoluted way, do not ask...
+Source: droidian:droidian-libhybris:next-libhybris-101
+Suites: trixie
+Components: main
+Architectures: amd64 armhf arm64
+
+Package: *
+Pin: release l=Droidian\ (droidian-libhybris-next-libhybris-101 channel)
+Pin-Priority: 1050
 
 # Always prefer update packages
 Package: *
