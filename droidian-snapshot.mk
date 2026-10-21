@@ -31,7 +31,7 @@ DROIDIAN_FEATURE_BRANCHES = \
  droidian-systemd:next-upgrade-257 \
  droidian-gnome-control-center:next-upgrade-47-rebase \
  droidian-network-manager:next-wwan-fix \
- droidian-firefox-esr-mobile-config:next-firefox \
+ droidian-firefox-esr-mobile-config:next-firefox-158 \
  droidian-qt6-base:next-gles \
  droidian-glib:next-pidfd-290 \
  droidian-bubblewrap:next-bwrap-suid \
