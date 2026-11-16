@@ -83,6 +83,12 @@ Pin-Priority: 1002
 # that we don't currently support
 Drop: src:turnstile
 
+# 2026-11-16: (Temporary) do not make Debian's libgbinder1
+# fall through without the rest of the stack being updated
+Package: src:libgbinder
+Pin: release o=Debian
+Pin-Priority: -1
+
 # Drop adaptation packages that aren't supported
 # anymore by one of the previous maintainers
 Drop: src:linux-android-daria-zahedan src:adaptation-droidian-zahedan
