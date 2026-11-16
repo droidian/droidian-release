@@ -79,6 +79,10 @@ Package: *
 Pin: release o=Droidian
 Pin-Priority: 1002
 
+# 2026-11-16: drop turnstile, a logind alternative
+# that we don't currently support
+Drop: src:turnstile
+
 # Drop adaptation packages that aren't supported
 # anymore by one of the previous maintainers
 Drop: src:linux-android-daria-zahedan src:adaptation-droidian-zahedan
